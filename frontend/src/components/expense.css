@@ -1,0 +1,456 @@
+/* Root variables (CSS HEX) */
+:root {
+  --tory-blue: #1368aa;
+  --steel-blue: #4286bb;
+  --ocean-green: #ecf4f2;
+  --tradewind: #69bba2;
+  --cod-gray: #0c0c0c;
+  --lima: #80b918;
+  --olivine: #8cb369;
+  --school-bus-yellow: #ffdd00;
+  --thunderbird: #cb1b16;
+  --purple-heart: #6b46c1; 
+  --emerald: #10b981; 
+}
+
+/* General body styling */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #ffffff;
+  color: var(--cod-gray);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* Main heading */
+h1 {
+  text-align: center;
+  color: var(--tory-blue);
+  margin: 20px 0;
+  font-size: 2.2em;
+}
+
+/* Fixed Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 99%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--ocean-green);
+  color: #fff;
+  padding: 6px 12px;
+  height: 50px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.navbar-logo {
+  font-size: 30px;
+  font-weight: bold;
+  font-family:'Callisto MT', 'Arial Black', sans-serif;
+  color: #1368aa;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  color: #072a9d;
+  text-decoration: none;
+  font-size: 16px;
+  font-style: oblique;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.nav-link:hover {
+  background: #4286bb;
+  color: #fff;
+}
+
+.nav-link.active {
+  background: #bde4d8;
+  color: #04ae62;
+  font-weight: bold;
+}
+
+/* Page content spacing below Navbar */
+.main-content {
+  padding-top: 65px;
+}
+
+/* Dashboard layout */
+.dashboard-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.chart-box {
+  background: #fff;
+  padding: 25px 15px 30px 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  flex: 1;
+  min-width: 385px;
+  max-width: 700px;
+}
+
+.chart-title {
+  font-size: 1.25rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #333;
+}
+
+.chart-box:hover {
+  transform: scale(1.03);
+}
+
+.chart-box h3 {
+  margin-bottom: 15px;
+  font-size: 17px;
+  color: #333;
+}
+
+.chart-wrapper {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  margin: 20px 0;
+}
+
+.empty-state {
+  text-align: center;
+  color: #888;
+}
+
+.empty-state-icon {
+  font-size: 40px;
+}
+
+/* Expense/Savings Tabs */
+.tab-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.tab-container button {
+  background: #f1f1f1;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px 18px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.tab-container button.active {
+  background: var(--tory-blue);
+  color: #fff;
+}
+
+.tab-container button:hover {
+  background: var(--ocean-green);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+/* Expense form */
+.expense-form {
+  background-color: #f8f9fa;
+  padding: 25px;
+  border-radius: 12px;
+  max-width: 500px;
+  margin: 30px auto;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  border: 1px solid #e9ecef;
+}
+
+.expense-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: var(--cod-gray);
+  font-size: 14px;
+}
+
+.expense-form input,
+.expense-form select,
+.expense-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: #fff;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.expense-form input:focus,
+.expense-form select:focus,
+.expense-form textarea:focus {
+  outline: none;
+  border-color: var(--tory-blue);
+  box-shadow: 0 0 0 3px rgba(19, 104, 170, 0.1);
+}
+
+.expense-form button {
+  background-color: var(--steel-blue);
+  color: var(--cod-gray);
+  border: none;
+  padding: 14px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.expense-form button:hover {
+  background-color: var(--lima);
+  color: #000;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+/* ---------------- Professional Expense List Table ---------------- */
+.expense-list {
+  max-width: 100%;
+  margin: 20px auto;
+  overflow-x: auto;
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 10px 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  font-family: 'Arial', sans-serif;
+}
+
+.expense-list h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 15px;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.expense-list table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  table-layout: fixed;
+}
+
+.expense-list th, 
+.expense-list td {
+  text-align: center;
+  padding: 12px 10px;
+  border: none;
+}
+
+.expense-list th {
+  background-color: #f4f4f4;
+  color: #555;
+  font-weight: 600;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.expense-list tbody tr {
+  background-color: #fafafa;
+  transition: background 0.2s ease;
+}
+
+.expense-list tbody tr:nth-child(even) {
+  background-color: #f0f0f0;
+}
+
+.expense-list tbody tr:hover {
+  background-color: #e8f0f5;
+}
+
+.expense-amount.expense {
+  color: #c0392b;
+  font-weight: 500;
+}
+
+.expense-amount.savings {
+  color: #27ae60;
+  font-weight: 500;
+}
+
+.expense-actions {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+
+.btn-update,
+.btn-delete {
+  padding: 5px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.btn-update {
+  background-color: #0a8d19;
+  color: #fff;
+}
+
+.btn-update:hover {
+  background-color: #2980b9;
+}
+
+.btn-delete {
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+.btn-delete:hover {
+  background-color: #c0392b;
+}
+
+/* Empty state */
+.empty-state {
+  text-align: center;
+  padding: 30px 15px;
+  color: #6c757d;
+  font-style: italic;
+  font-size: 0.95rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .expense-form, 
+  .expense-list,
+  .expense-summary,
+  .dashboard-container {
+    padding: 10px;
+    margin: 10px;
+  }
+
+  .expense-list table{
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto;
+  }
+
+  .expense-list th{
+    font-size: 12px;
+    padding: 8px 10px;
+  }
+
+  .expense-list td {
+    padding: 8px 10px;
+    font-size: 12px;
+    min-width: 80px;
+    word-break: break-word;
+  }
+
+  .expense-actions {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
+/* Gradient background for whole page */
+body {
+  background: linear-gradient(135deg, #1368aa, #4286bb, #69bba2, #43aa8b);
+  background-attachment: fixed;
+}
+
+/* Floating orb background accents */
+body::before {
+  content: "";
+  position: fixed;
+  top: -60px;
+  left: -60px;
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, #f2f1ed4b, transparent);
+  border-radius: 50%;
+  animation: float 12s infinite alternate ease-in-out;
+  z-index: -1;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  bottom: -80px;
+  right: -80px;
+  width: 280px;
+  height: 280px;
+  background: radial-gradient(circle, #5b5e5d68, transparent);
+  border-radius: 50%;
+  animation: float 15s infinite alternate-reverse ease-in-out;
+  z-index: -1;
+}
+
+@keyframes float {
+  from { transform: translateY(0px); }
+  to { transform: translateY(40px); }
+}
+
+/* Glassmorphism for chart cards */
+.chart-box, .chart-wrapper {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+/* Chart titles with accent border */
+.chart-title {
+  border-bottom: 3px solid var(--ocean-green);
+  padding-bottom: 8px;
+}
+/* ---------------- Floating Coins ---------------- */
+.coin {
+  content: "";
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  background: radial-gradient(circle, #fcdb03fa, #7e5b0333, transparent);
+  border-radius: 50%;
+  animation: spinCoin 8s infinite linear;
+  z-index: -1;
+}
+
+.coin1 { top: 100px; left: 15%; }
+.coin2 { bottom: 100px; right: 15%; }
+
+
+@keyframes spinCoin {
+  0% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(180deg) scale(1.2); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+

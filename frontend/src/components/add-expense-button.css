@@ -1,0 +1,23 @@
+/* Add Expense Button - Custom Style */
+.add-expense-button.custom-add-expense-btn {
+  background: linear-gradient(90deg, var(--tory-blue) 0%, var(--school-bus-yellow) 100%);
+  color: #120303;
+  border: none;
+  padding: 20px 40px;
+  border-radius: 12px;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(.4,2,.6,1);
+  width: auto;
+  margin-top: 18px;
+  box-shadow: 0 6px 24px rgba(19,104,170,0.12);
+  letter-spacing: 1px;
+}
+
+.add-expense-button.custom-add-expense-btn:hover {
+  background: linear-gradient(90deg, var(--school-bus-yellow) 0%, var(--tory-blue) 100%);
+  color: var(--cod-gray);
+  transform: scale(1.07) translateY(-2px);
+  box-shadow: 0 8px 32px rgba(19,104,170,0.18);
+}
